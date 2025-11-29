@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #050505, #0a0a15, #000018);
+            color: white;
+        }
+
+/* NAVBAR */
+.a {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #ff000d;
+    box-shadow: 0 4px 20px rgba(0, 234, 255, 0.4);
+    animation: glowBar 4s infinite alternate;
+    z-index: 1000;
+}
+
+@keyframes glowBar {
+    0% { box-shadow: 0 0 15px #00eaff; }
+    100% { box-shadow: 0 0 35px #fa030f; }
+}
+
+.b {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00eaff;
+    text-shadow: 0 0 18px #00eaff;
+}
+
+.d {
+    display: flex;
+    list-style: none;
+}
+
+.d li {
+    margin-left: 30px;
+}
+
+.d a {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.d a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 12px #ff002b;
+}
+
+.d a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0529f8, #b3010a);
+    transition: width 0.3s;
+}
+
+.d a:hover::before {
+    width: 100%;
+}
+
+body {
+    background-image: url('kk.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* REKOMENDASI */
+.f {
+    padding: 100px 25px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.f h2 {
+    font-size: 45px;
+    color: #ff6bff;
+    text-shadow: 0 0 18px #ff6bff;
+    margin-bottom: 15px;
+}
+
+.f p {
+    color: #dcdcdc;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.g {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.h {
+    background: rgba(19, 18, 18, 0.06);
+    padding: 18px;
+    border-radius: 18px;
+    border: 2px solid rgba(5, 1, 1, 0.15);
+    transition: 0.35s ease;
+    box-shadow: 0 0 14px rgba(255, 107, 255, 0.25);
+}
+
+.h:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: #ff6bff;
+    box-shadow: 0 0 25px #ff6bff;
+}
+
+.h img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.h h3 {
+    font-size: 24px;
+    color: #ff6bff;
+    margin-bottom: 8px;
+    text-shadow: 0 0 12px #ff6bff;
+}
+
+.h p {
+    font-size: 15px;
+    color: #f0e0ff;
+    line-height: 1.5;
+}
+
+/* BUTTON */
+.i {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #000;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px #00eaff;
+}
+
+.i:hover {
+    background: #00c0d4;
+    box-shadow: 0 0 22px #00eaff;
+    transform: scale(1.07);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #050505;
+    color: #aaa;
+    margin-top: 60px;
+}
+    </style>
+</head>
+
+<body>
+    
+<nav class="a">
+    <div class="b">
+        <h1 class="c">Anime Neon</h1>
+        <ul class="d">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="karakter.html">karakter</a></li>
+            <li><a href="rekomendasi.html">rekomendasi</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="f">
+    <h2>🔥 Rekomendasi Anime Terbaik</h2>
+    <p>Pilihan anime terbaik dengan tampilan neon yang lebih rapi dan aesthetic.</p>
+
+    <div class="g">
+
+        <div class="h">
+            <img src="nruto.jpg" alt="Naruto" />
+            <h3>Naruto</h3>
+            <p>Petualangan Naruto Uzumaki mengejar impiannya menjadi Hokage.</p>
+            <a href="https://www.crunchyroll.com/id/series/GYQ4MW246/naruto-shippuden?srsltid=AfmBOopsdTbvfT2er7BECZ6vBnBMwZsbb5x0P4JfBapyuJWdNjB_bjin" class="i">Tonton Sekarang</a>
+        </div>
+
+        <div class="h">
+            <img src="hori.jpg" alt="One Piece" />
+            <h3>One Piece</h3>
+            <p>Luffy dan kru Bajak Laut Topi Jerami dalam pencarian One Piece.</p>
+            <a href="https://www.crunchyroll.com/id/series/G9VHN9P43/horimiya" class="i">Tonton Sekarang</a>
+        </div>
+
+        <div class="h">
+            <img src="anta.jpg" alt="Attack on Titan" />
+            <h3>Attack on Titan</h3>
+            <p>Pertarungan melawan titan raksasa demi kebebasan umat manusia.</p>
+            <a href="https://youtu.be/JV4Og5Dyhf0?si=MgEe7DPqL12IFogL" class="i">Tonton Sekarang</a>
+        </div>
+
+        <div class="h">
+            <img src="sw.webp" alt="My Hero Academia" />
+            <h3>My Hero Academia</h3>
+            <p>Kisah para pahlawan muda di sekolah U.A untuk menjadi hero besar.</p>
+            <a href="ttps://www.crunchyroll.com/id/series/G6W4QKX0R/the-rising-of-the-shield-hero" class="i">Tonton Sekarang</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 hak cipta-zahra ❤️
+</footer>
+
+</body>
+</html>
