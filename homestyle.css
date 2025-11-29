@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('aa.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Gambar tetap saat di-scroll */
+    background-position: center; /* Posisi di tengah */
+    background-size: cover; /* Gambar menutupi seluruh area */
+}
+.aa {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #ff4444;
+    box-shadow: 0 4px 10px rgba(255, 68, 68, 0.3);
+    animation: navbarPulse 3s ease-in-out infinite;
+    z-index: 1000;
+}
+
+@keyframes navbarPulse {
+    0%, 100% { box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3); }
+    50% { box-shadow: 0 4px 20px rgba(78, 205, 196, 0.5); }
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zzi {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-shadow: 0 0 10px #ff6b6b;
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    0% { text-shadow: 0 0 10px #ff6b6b; }
+    100% { text-shadow: 0 0 20px #4ecdc4; }
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-menu a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #4ecdc4;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px #4ecdc4;
+}
+
+.nav-menu a:hover::before {
+    width: 100%;
+}
+.zz {
+    min-height: 100vh;
+    padding: 120px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zz-content {
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: heroFadeIn 2s ease-out;
+}
+
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.zz-content h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    color: blanchedalmond;
+    text-align: center;
+
+}
+
+.zz-content p {
+    font-size: 24px;
+    color: #e0e0e0;
+    text-align: center;
+}
+.zahra-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.zahra-item {
+    padding: 16px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+}
+
+.zahra-item:hover {
+    transform: scale(1.05) rotate(1deg);
+    border-color: #ff6b6b;
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+}
+
+.zahra-item video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.z-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+}
+
+.z-btn:hover {
+    background: #ff3b3b;
+    box-shadow: 0 0 15px #ff3b3b, 0 0 30px #ff3b3b;
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 100px) {
+
+    .nav-menu {
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        display: none;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .zz-content h2 {
+        font-size: 32px;
+    }
+
+    .zz-content p {
+        font-size: 18px;
+    }
+}
+
+    .footer {
+            text-align: center;
+            padding: 20px;
+            background: #bdbaba;
+            color: #0c0b0b;
+            margin-top: 30px;
+        }
