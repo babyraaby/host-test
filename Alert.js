@@ -1,1 +1,0 @@
-alert("Ini biodata Saya");
